@@ -91,7 +91,7 @@ bot/
 ## Инструкция по развёртыванию
 
 ### 1. Требования
-- Python **3.10+**
+- Python **3.14.4**
 - pip
 
 ### 2. Клонирование и установка зависимостей
@@ -114,7 +114,7 @@ cp .env.example .env
 
 ```env
 # Токен бота из Discord Developer Portal
-BOT_TOKEN=ваш_токен
+BOT_TOKEN=BOT_TOKEN
 
 # ID вашего сервера
 GUILD_ID=123456789

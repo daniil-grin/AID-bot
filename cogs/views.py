@@ -217,9 +217,13 @@ class ApplicationControlView(discord.ui.View):
             member = guild.get_member(app["user_id"]) if guild else None
 
             if member:
-                role_ids   = config.GRANT_ROLE_IDS.get(app["type"], [])
-                roles_ok   = [r for rid in role_ids if (r := guild.get_role(rid))]
-                roles_miss = [rid for rid in role_ids if not guild.get_role(rid)]
+                role_ids = config.GRANT_ROLE_IDS.get(app["type"], [])
+                if not role_ids:
+                    result_lines.append(f"⚠️ Роли для «{app['type']}» не заданы — роли не выданы")
+                    roles_ok, roles_miss = [], []
+                else:
+                    roles_ok   = [r for rid in role_ids if (r := guild.get_role(rid))]
+                    roles_miss = [rid for rid in role_ids if not guild.get_role(rid)]
 
                 _fmt = config.NICKNAME_FORMATS.get(app["type"], "{first_name} {last_name}")
                 new_nick = _fmt.format(
