@@ -1,9 +1,5 @@
 """
 cogs/tasks.py — фоновые задачи.
-
-Исправления:
-  - purge_old теперь async, корректно awaitable
-  - ensure_panel_is_last получает bot явно
 """
 from __future__ import annotations
 

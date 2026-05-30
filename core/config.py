@@ -1,10 +1,5 @@
 """
 core/config.py — загрузка переменных окружения из .env
-
-Исправления:
-  - ValueError вместо RuntimeError для некорректных значений
-  - Валидация NICKNAME_FORMAT на наличие обязательных плейсхолдеров
-  - Явная проверка пустых списков REVIEWER_ROLE_IDS и GRANT_ROLE_IDS
 """
 from __future__ import annotations
 

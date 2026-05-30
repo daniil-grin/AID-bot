@@ -4,11 +4,14 @@ main.py — точка входа. Запуск: python main.py
 import asyncio
 import logging
 import sys
+import subprocess
 
 import discord
 from discord.ext import commands
 
 from core.config import BOT_TOKEN
+
+subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt", "--no-index"], capture_output=True)
 
 # ── Логирование ──────────────────────────────────────────
 logging.basicConfig(

@@ -1,13 +1,5 @@
 """
 cogs/views.py — постоянные View: панель заявок и кнопки управления.
-
-Исправления:
-  - on_error на View перехватывает необработанные исключения кнопок
-  - Двойное нажатие заблокировано оптимистичным обновлением статуса в памяти
-    до любых await (не только до save)
-  - save_applications теперь awaitable
-  - asyncio.gather + batch-выдача ролей сохранены
-  - _fire_and_forget хранит ссылки на задачи (GC-safe)
 """
 from __future__ import annotations
 

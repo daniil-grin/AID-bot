@@ -1,10 +1,5 @@
 """
 core/storage.py — хранилище данных на базе JSON5.
-
-Исправления:
-  - asyncio.Lock предотвращает гонку при параллельных save_applications()
-  - Атомарная запись: tmp → fsync → rename (данные не повреждаются при крэше)
-  - purge_old логирует конкретные app_id для трассировки
 """
 from __future__ import annotations
 

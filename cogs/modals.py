@@ -1,10 +1,5 @@
 """
 cogs/modals.py — модальные формы подачи и редактирования заявок.
-
-Исправления:
-  - on_error перехватывает необработанные исключения в каждой форме
-  - save_applications теперь awaitable (async)
-  - .strip() на всех полях перенесён в единую точку при сборке record
 """
 from __future__ import annotations
 

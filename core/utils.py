@@ -1,10 +1,5 @@
 """
 core/utils.py — общие вспомогательные функции.
-
-Исправления:
-  - check_cooldown: используется datetime.now() однократно (не дважды)
-  - ensure_panel_is_last: принимает bot явно, не достаёт его через _state
-  - on_error обработчик в modal через on_error
 """
 from __future__ import annotations
 
